@@ -1,0 +1,74 @@
+:root{
+    --rod1Primary:#067e5a;
+    --rod1Secondary:#07b178;
+    --rod2Primary:#d40c5f;
+    --rod2Secondary:#910a3e;
+    --body: rgb(24, 24, 24);
+}
+body {
+    background-color: var(--body);
+    overflow: hidden;
+}
+
+
+/* rod */
+.rod1, .rod2 {
+    width: 200px;
+    height: 30px;
+    position: fixed;
+    left: 43%;
+    border-radius: 5px;
+    text-align: center;
+    color: var(--body);
+    font-weight: bold;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.rod1 {
+    background: linear-gradient(var(--rod1Primary),var(--rod1Secondary));
+    box-shadow:0 1px 12px var(--rod1Secondary);
+    top: 1px;    
+}
+.rod2 {
+    background: linear-gradient(var(--rod2Primary),var(--rod2Secondary));
+    box-shadow:0 -1px 12px var(--rod2Secondary);
+    bottom: 2px;
+}
+
+/* centre */
+.partition{
+    position:absolute;
+    top:50vh;
+    opacity:.5;
+    height: 2px;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+/* Style for Score board */
+.rod1Score{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    position:absolute;
+    left:50%;
+    top:20vh;
+    transform:translateX(-50%); 
+    opacity:.5;
+    color:var(--rod1Secondary);
+    font-size:5rem;
+}
+.rod2Score{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    position:absolute;
+    position:absolute;
+    left:50%;
+    top:45vh;
+    transform:translateX(-50%);
+    opacity:.5;
+    color:var(--rod2Primary);
+    font-size:5rem;
+}
